@@ -21,10 +21,11 @@ This README will help you set up and run the project locally for development pur
 - `mysqlclient` (or `PyMySQL`) for MySQL support
 - Virtual environment (recommended)
 
-## Installation
 
-### 1. Clone the repository
+# Step 13: Optionally run tests to ensure everything is working
+pytest
 
-```bash
-git clone https://github.com/yourusername/BharatFd.git
-cd BharatFd
+# Troubleshooting tips:
+# - Ensure MySQL is running using the appropriate command for your OS.
+# - Make sure the settings in settings.py match your MySQL database configuration.
+
