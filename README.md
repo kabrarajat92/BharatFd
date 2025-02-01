@@ -4,7 +4,7 @@
 
 BharatFd is a multilingual FAQ management system built with Django. This project provides a comprehensive solution for managing frequently asked questions (FAQs) with support for multiple languages, rich text editor integration, and a RESTful API for querying FAQs. The project also implements caching using Redis for optimized performance and includes automated translation support using the Google Translate API.
 ![image](https://github.com/user-attachments/assets/5a29b01b-6311-4f14-8a18-f11e6c201ce1)
-----------------------------------------------------------------------------------------------------------------------------
+
 ![image](https://github.com/user-attachments/assets/116202af-119a-413e-8085-165ec521b32b)
 
 
