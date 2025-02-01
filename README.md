@@ -94,6 +94,9 @@ curl http://localhost:8000/api/faqs/?lang=hi
 ```
 curl http://localhost:8000/api/faqs/?lang=bn
 ```
+
+![image](https://github.com/user-attachments/assets/8b7b6af9-1641-4a74-8d07-4460572bb897)
+
 ### Step 6: Docker Usage
 If you'd like to use Docker to isolate the environment, you can follow these steps:
 - Build and Start Containers
