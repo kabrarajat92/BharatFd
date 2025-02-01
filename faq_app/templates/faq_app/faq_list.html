@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions</title>
+</head>
+<body>
+    <h1>Frequently Asked Questions</h1>
+
+    <!-- Language Selection Form -->
+    <form method="get" style="margin-bottom: 20px;">
+        <label for="lang">Select Language:</label>
+        <select name="lang">
+            <option value="en" {% if lang == 'en' %}selected{% endif %}>English</option>
+            <option value="hi" {% if lang == 'hi' %}selected{% endif %}>Hindi</option>
+            <option value="bn" {% if lang == 'bn' %}selected{% endif %}>Bengali</option>
+        </select>
+        <button type="submit">Switch Language</button>
+    </form>
+
+    <!-- Search Form -->
+    <form method="get" style="margin-bottom: 20px;">
+        <input type="text" name="q" placeholder="Search FAQs" value="{{ query }}">
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- FAQ List -->
+    <ul>
+        {% for faq in faq_data %}
+            <li><strong>{{ faq.question }}</strong><br>{{ faq.answer }}</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Pagination Links -->
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1&lang={{ lang }}&q={{ query }}">&laquo; first</a>
+                <a href="?page={{ page_obj.previous_page_number }}&lang={{ lang }}&q={{ query }}">previous</a>
+            {% endif %}
+
+            <span class="current">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+            </span>
+
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}&lang={{ lang }}&q={{ query }}">next</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}&lang={{ lang }}&q={{ query }}">last &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+</body>
+</html>
